@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+input {
+    width: 80%;
+    margin: 10px 0;
+    appearance: none;
+    background: #ddd;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input::-webkit-slider-thumb:hover {
+    background: #0056b3;
+}
+
+canvas {
+    border: 2px solid #000;
+    margin-top: 20px;
+    background: white;
+    display: block;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+#output p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    input {
+        width: 90%;
+    }
+
+    canvas {
+        width: 90%;
+    }
+
+    #output {
+        width: 90%;
+        font-size: 14px;
+    }
+}
