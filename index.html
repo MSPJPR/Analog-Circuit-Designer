@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Circuit Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Analog Circuit Designer & Analyzer</h1>
+
+    <label for="gain">Gain (dB):</label>
+    <input type="range" id="gain" min="10" max="100" value="40" oninput="updateValues()">
+    <span id="gainValue">40</span>dB
+
+    <label for="bandwidth">Bandwidth (MHz):</label>
+    <input type="range" id="bandwidth" min="1" max="500" value="50" oninput="updateValues()">
+    <span id="bandwidthValue">50</span>MHz
+
+    <canvas id="circuitCanvas"></canvas>
+
+    <div id="output">
+        <p><strong>Voltage Swing:</strong> <span id="voltageSwing">N/A</span> V</p>
+        <p><strong>Power Dissipation:</strong> <span id="powerDissipation">N/A</span> mW</p>
+        <p><strong>Slew Rate:</strong> <span id="slewRate">N/A</span> V/μs</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
